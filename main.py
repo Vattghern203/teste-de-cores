@@ -1,4 +1,4 @@
-from email.mime import image
+from colorsys import rgb_to_hsv
 from PIL import Image, ImageOps
 
 img = Image.open("photo_1.webp")
@@ -14,18 +14,13 @@ def imageMatrix(imgToConvert):
 
     return print(cores)
 
-def imageGrayScale(imgtToConvert):
-    newImg = ImageOps.grayscale(imgtToConvert)
-
-    return newImg
-
 img3 = ImageOps.grayscale(imgPSD)
 
 img3.show()
 
 imgToSave = img.save("savedPhoto.jpg")
 
-r, g, b = imgPSD.split()
+'''r, g, b = imgPSD.split()
 len(r.histogram())
 
 histogramR = r.histogram(mask=None, extrema=None)
@@ -34,7 +29,7 @@ histogramB = b.histogram()
 
 print('R = {} \n\n G = {} \n\n B = {}'.format(histogramR, histogramG, histogramB))
 
-print(img.histogram())
+print(img.histogram())'''
 
 
 
