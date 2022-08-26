@@ -1,12 +1,15 @@
 import colorsys
+
 from PIL import Image, ImageOps
 
-def imageGrayScale(imgtToConvert):
-    newImg = ImageOps.grayscale(imgtToConvert)
+from defaultFunctions import save_image
 
-    return newImg
+def image_gray_scale(img):
+    new_img = ImageOps.grayscale(img)
 
-def rgbToHSV(img):
+    return new_img
+
+def image_rgb_2_hsv(img):
         r, g, b = img.split()
         Hdat = []
         Sdat = []
@@ -25,12 +28,17 @@ def rgbToHSV(img):
         print('H = {} \n S = {} \n V = {}'.format(Hdat, Sdat, Vdat))
 
         print(len(Hdat))
+    
+        hsv_image = Image.merge('RGB', (r, g, b))
 
-        return Image.merge('RGB', (r, g, b))
+        save_image(hsv_image)
 
-a = Image.open("img_bmp_16.bmp")
-b = rgbToHSV(a)
-b.save("convertida.jpg")
-b.show()
+        return hsv_image
+
+
+
+new_op_img = Image.open("imgs\img_bmp_16.bmp")
+img_to_save = image_rgb_2_hsv(new_op_img)
+img_to_save.show()
 
 
