@@ -24,6 +24,8 @@ def rgbToHSV(img):
 
         print('H = {} \n S = {} \n V = {}'.format(Hdat, Sdat, Vdat))
 
+        print(len(Hdat))
+
         return Image.merge('RGB', (r, g, b))
 
 a = Image.open("img_bmp_16.bmp")
