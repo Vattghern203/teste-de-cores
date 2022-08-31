@@ -4,13 +4,14 @@ from PIL import Image, ImageOps
 
 from time import time
 
-# from convert import image_gray_scale, image_rgb_2_hsv
 from defaultFunctions import save_image
 
-'''img = Image.open(r"../imgs/photo_1.webp")
-img2 = Image.open(r"../imgs/img_bmp_16.bmp")
-imgTree = Image.open(r"../imgs/tree7.jpg")
-imgPSD = Image.open(r"../imgs/ImagemOriginal.psd")
+from colorConvert import image_rgb_2_hsv
+
+'''img = Image.open(r"imgs/photo_1.webp")
+img2 = Image.open(r"imgs/img_bmp_16.bmp")
+imgTree = Image.open(r"imgs/tree7.jpg")
+imgPSD = Image.open(r"imgs/ImagemOriginal.psd")
 
 img3 = ImageOps.grayscale(imgPSD)
 
@@ -32,8 +33,8 @@ print(img.histogram())
 img_jaco = Image.open(r"imgs/jaco.jpg")
 img_jaco_hsv = image_rgb_2_hsv(img_jaco)
 save_image(img_jaco_hsv, "jaco_bolado")
-img_jaco_hsv.show()'''
-
+img_jaco_hsv.show()
+'''
 
     
     

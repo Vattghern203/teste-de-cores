@@ -1,8 +1,6 @@
 import colorsys
 
-from PIL import Image, ImageOps
-
-from defaultFunctions import save_image
+from main import Image, ImageOps, save_image
 
 def image_gray_scale(img):
     new_img = ImageOps.grayscale(img)
@@ -36,8 +34,8 @@ def image_rgb_2_hsv(img):
         return hsv_image
 
 
-
+'''
 new_op_img = Image.open("imgs\img_bmp_16.bmp")
 img_to_save = image_rgb_2_hsv(new_op_img)
 img_to_save.show()
-
+'''
