@@ -1,5 +1,3 @@
-'''
-
 import colorsys
 
 from PIL import Image, ImageOps
@@ -42,5 +40,4 @@ def image_rgb_2_hsv(img):
 new_op_img = Image.open("imgs\img_bmp_16.bmp")
 img_to_save = image_rgb_2_hsv(new_op_img)
 img_to_save.show()
-'''
 

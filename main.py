@@ -1,5 +1,8 @@
 from colorsys import rgb_to_hsv
+
 from PIL import Image, ImageOps
+
+from time import time
 
 # from convert import image_gray_scale, image_rgb_2_hsv
 from defaultFunctions import save_image
