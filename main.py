@@ -31,40 +31,6 @@ img_jaco_hsv = image_rgb_2_hsv(img_jaco)
 save_image(img_jaco_hsv, "jaco_bolado")
 img_jaco_hsv.show()'''
 
-img = Image.open(r"imgs/original/cafe_base.png").convert('RGB')
-img_scan = Image.open(r"imgs/original/cafe.jpg").convert('RGB')
-
-img_data = list(img.getdata())
-
-print(img_data[0][1])
-
-range = img.getextrema()
-
-print(range)
-
-red_range_min = range[0][0]
-red_range_max = range[0][1]
-
-print(img.width, img.height)
-
-ok = []
-
-img_scan_pixels = list(img_scan.getdata())
-
-for pixel in img_scan_pixels:
-    if pixel >= (87, 1, 0) and pixel <= (255, 171, 248):
-        img_scan.putpixel()
-        print("OK")
-
-        ok.append(pixel)
-
-    else:
-
-        print("No")
-
-print(ok)
-img_scan.show()
-
 
     
     
